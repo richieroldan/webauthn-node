@@ -282,7 +282,7 @@ class Webauthn {
 
       if (result.verified) {
         req.session.loggedIn = true
-        return res.status(200).json({ status: 'ok' })
+        return res.status(200).json({ status: 'ok',id })
 
       } else {
         return res.status(401).json({ status: 'failed', message: 'verification failed' })
