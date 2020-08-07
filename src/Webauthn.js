@@ -114,8 +114,8 @@ class Webauthn {
         .setUserInfo(user)
         .setAttestationType(this.config.attestation)
         .setAuthenticator(this.config.authenticator)
-        .addCredentialExclusion(
-            user.credentials.map(credential => ({ id: credential.credID })))
+        // .addCredentialExclusion(
+        //     user.credentials.map(credential => ({ id: credential.credID })))
         .setRelyingPartyInfo({ name: this.config.rpName || options.rpName })
         .build({ status: 'ok' })
 
